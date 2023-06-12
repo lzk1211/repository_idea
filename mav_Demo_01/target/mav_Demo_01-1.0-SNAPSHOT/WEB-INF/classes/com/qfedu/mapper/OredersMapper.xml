@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qfedu.mapper.OrdersMapper">
+
+    <select id="getOrdersAll" resultType="com.qfedu.domain.Orders">
+        select * from orders;
+    </select>
+
+    <select id="getOrdersByUid" resultType="com.qfedu.domain.Orders">
+        select * from orders where uid=#{uid}
+    </select>
+    
+<!--    <resultMap id="OrdersByUid" type="com.qfedu.domain.Orders">-->
+
+<!--        <collection property="" column="" select=""/>-->
+<!--    </resultMap>-->
+</mapper>
